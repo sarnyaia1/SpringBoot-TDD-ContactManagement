@@ -16,7 +16,12 @@ public class ContactsManagementServiceIntegrationTest {
 	private ContactsManagementService contactsManagementService;
 
 	@Test
-	public void newAddedContactIsNotNullTest() {
+	public void contactsManagementServiceIsNotNull(){
+		assertNotNull(contactsManagementService);
+	}
+
+	@Test
+	public void addNewContactIsNotNullTest() {
 		CustomerContact contact1 = new CustomerContact();
 		contact1.setFirstName("Jane");
 		contact1.setLastName("Doe");

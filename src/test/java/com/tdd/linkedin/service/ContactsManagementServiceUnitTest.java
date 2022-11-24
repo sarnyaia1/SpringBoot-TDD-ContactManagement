@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -28,9 +29,19 @@ public class ContactsManagementServiceUnitTest {
     public void setup() {
 		MockitoAnnotations.initMocks(this);
 	}
+
+	@Test
+	public void contactsManagementServiceIsNotNull(){
+		assertNotNull(contactsManagementService);
+	}
+
+	@Test
+	public void contactsManagementRepositoryIsNotNull(){
+		assertNotNull(customerContactRepository);
+	}
 	
 	@Test
-	public void testAddContactHappyPath() {
+	public void addNewMockContactTest() {
 		CustomerContact mockContact1 = new CustomerContact();
 		mockContact1.setFirstName("John");
 		mockContact1.setLastName("Smith");

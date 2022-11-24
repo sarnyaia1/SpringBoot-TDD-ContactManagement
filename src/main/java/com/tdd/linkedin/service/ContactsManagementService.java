@@ -13,10 +13,11 @@ public class ContactsManagementService {
 	private CustomerContactRepository customerContactRepository;
 	
 	public CustomerContact add(CustomerContact aContact) {
-		
-		CustomerContact newContact;
-		newContact = customerContactRepository.save(aContact);
+		CustomerContact newContact = null;
 
+		if(aContact.getFirstName() != null && aContact.getLastName() != null){
+			newContact = customerContactRepository.save(aContact);
+		}
 		return newContact;	
 	}
 	
