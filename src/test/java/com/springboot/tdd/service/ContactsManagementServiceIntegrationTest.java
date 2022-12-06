@@ -1,6 +1,7 @@
-package com.tdd.linkedin.service;
+package com.springboot.tdd.service;
 
-import com.tdd.linkedin.model.CustomerContact;
+import com.springboot.tdd.domain.CustomerContact;
+import com.springboot.tdd.service.ContactsManagementService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

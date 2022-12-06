@@ -1,7 +1,8 @@
-package com.tdd.linkedin.service;
+package com.springboot.tdd.service;
 
-import com.tdd.linkedin.model.CustomerContact;
-import com.tdd.linkedin.repository.CustomerContactRepository;
+import com.springboot.tdd.domain.CustomerContact;
+import com.springboot.tdd.repository.CustomerContactRepository;
+import com.springboot.tdd.service.ContactsManagementService;
 import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

@@ -1,4 +1,4 @@
-package com.tdd.linkedin;
+package com.springboot.tdd;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,27 +15,27 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class ContactManagementApplicationTests {
+class MainTDDApplicationTest {
 
-	//ContactsManagementController mock?!
-	@Autowired
-	private MockMvc mockMvc;
+    //ContactsManagementController mock?!
+    @Autowired
+    private MockMvc mockMvc;
 
-	@Test
-	public void contextLoadTest() {
-		//context is loaded
-	}
+    @Test
+    public void contextLoadTest() {
+        //context is loaded
+    }
 
-	@Test
-	public void MockMvcIsNotNull(){
-		assertNotNull(mockMvc);
-	}
+    @Test
+    public void MockMvcIsNotNull(){
+        assertNotNull(mockMvc);
+    }
 
-	@Test
-	public void homepageShouldReturnDefaultMessageWithStatusOkTest() throws Exception {
-		mockMvc.perform(get("/"))
-				.andDo(print())
-				.andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hello World")));
-	}
+    @Test
+    public void homepageShouldReturnDefaultMessageWithStatusOkTest() throws Exception {
+        mockMvc.perform(get("/"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Hello World")));
+    }
 }

@@ -1,4 +1,4 @@
-package com.tdd.linkedin.model;
+package com.springboot.tdd.domain;
 
 public class ContactImportantOccasion {
 

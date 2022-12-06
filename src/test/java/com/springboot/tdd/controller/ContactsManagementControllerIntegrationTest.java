@@ -1,6 +1,6 @@
-package com.tdd.linkedin.controller;
+package com.springboot.tdd.controller;
 
-import com.tdd.linkedin.model.CustomerContact;
+import com.springboot.tdd.domain.CustomerContact;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,7 +26,7 @@ public class ContactsManagementControllerIntegrationTest {
 		CustomerContact contact1 = new CustomerContact();
 		contact1.setFirstName("John");
 		contact1.setLastName("Doe");
-		String outcome = contactsManagementController.addNewContact(contact1);
+		String outcome = contactsManagementController.processAddContactSubmit(contact1);
 
 		assertNotNull(contact1);
 		assertEquals(outcome, "Add new contact is SUCCESSFUL");
@@ -37,7 +37,7 @@ public class ContactsManagementControllerIntegrationTest {
 	public void addNewContactGetUnsuccessfulMessageAfterMissedFirstNameTest() {
 		CustomerContact contact1 = new CustomerContact();
 		contact1.setLastName("Doe");
-		String outcome = contactsManagementController.addNewContact(contact1);
+		String outcome = contactsManagementController.processAddContactSubmit(contact1);
 
 		assertNotNull(contact1);
 		assertEquals(outcome, "Add new contact is UNSUCCESSFUL");
@@ -48,7 +48,7 @@ public class ContactsManagementControllerIntegrationTest {
 	public void addNewContactGetUnsuccessfulMessageAfterMissedLastNameTest() {
 		CustomerContact contact1 = new CustomerContact();
 		contact1.setFirstName("John");
-		String outcome = contactsManagementController.addNewContact(contact1);
+		String outcome = contactsManagementController.processAddContactSubmit(contact1);
 
 		assertNotNull(contact1);
 		assertEquals(outcome, "Add new contact is UNSUCCESSFUL");

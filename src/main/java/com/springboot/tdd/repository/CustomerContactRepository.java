@@ -1,8 +1,9 @@
-package com.tdd.linkedin.repository;
+package com.springboot.tdd.repository;
 
-import com.tdd.linkedin.model.CustomerContact;
+import com.springboot.tdd.domain.CustomerContact;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CustomerContactRepository extends CrudRepository<CustomerContact, Long> {
 
+	CustomerContact findByEmail(String email);
 }
