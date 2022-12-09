@@ -16,10 +16,10 @@ public class ContactsManagementController {
 		return "Hello World";
 	}
 
-	//Update!!!
+
 	@GetMapping("/contacts")
 	public @ResponseBody String getAllContacts(){
-		return "Load all contact";
+		return "Load all contact...";
 	}
 	
 	@PostMapping("/contacts")

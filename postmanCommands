@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "7fd7a0fc-4622-4f49-86c7-2288e06bdfa1",
+		"name": "ContactsManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23570399"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/contacts"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/contacts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/contacts"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/contacts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "pass",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Smith\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/contacts"
+			},
+			"response": []
+		}
+	]
+}
